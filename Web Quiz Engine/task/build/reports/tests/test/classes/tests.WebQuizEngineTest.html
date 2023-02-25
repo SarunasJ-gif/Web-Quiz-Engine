@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">11.763s</div>
+<div class="counter">39.048s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">11.763s</td>
+<td class="success">39.048s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -98,252 +98,482 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
 ?[0m?[0;34m
-?[0m?[0;34m2023-02-15 08:08:50.998  INFO 6664 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.4.1 on Sarunas with PID 6664 (started by ACER in C:\Users\ACER\IdeaProjects\Web Quiz Engine\Web Quiz Engine\task)
-?[0m?[0;34m2023-02-15 08:08:51.004  INFO 6664 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-02-15 08:08:55.119  INFO 6664 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
-?[0m?[0;34m2023-02-15 08:08:55.159  INFO 6664 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-02-15 08:08:55.160  INFO 6664 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-?[0m?[0;34m2023-02-15 08:08:55.470  INFO 6664 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-02-15 08:08:55.470  INFO 6664 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4341 ms
-?[0m?[0;34m2023-02-15 08:08:57.319  INFO 6664 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-02-15 08:08:57.463  INFO 6664 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
-?[0m?[0;34m2023-02-15 08:08:57.489  INFO 6664 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 7.555 seconds (JVM running for 9.435)
-?[0;34m2023-02-15 08:08:58.242  INFO 6664 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-02-15 08:08:58.243  INFO 6664 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-02-15 08:08:58.247  INFO 6664 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+?[0m?[0;34m2023-02-25 13:05:29.322  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.4.1 on Sarunas with PID 4268 (started by ACER in C:\Users\ACER\IdeaProjects\Web Quiz Engine\Web Quiz Engine\task)
+?[0m?[0;34m2023-02-25 13:05:29.326  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-02-25 13:05:31.418  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-02-25 13:05:31.490  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-02-25 13:05:32.585  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+?[0m?[0;34m2023-02-25 13:05:32.606  INFO 4268 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-02-25 13:05:32.608  INFO 4268 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-02-25 13:05:32.803  INFO 4268 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-02-25 13:05:32.803  INFO 4268 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3397 ms
+?[0m?[0;34m2023-02-25 13:05:33.072  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-02-25 13:05:33.471  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-02-25 13:05:33.490  INFO 4268 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+?[0m?[0;34m2023-02-25 13:05:33.820  INFO 4268 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-02-25 13:05:33.947  INFO 4268 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-02-25 13:05:34.275  INFO 4268 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-02-25 13:05:34.541  INFO 4268 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34mHibernate: create table questions (id integer generated by default as identity, answer binary(255), options binary(255), text varchar(255), title varchar(255), primary key (id))
+?[0m?[0;34m2023-02-25 13:05:35.751  INFO 4268 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-02-25 13:05:35.771  INFO 4268 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-02-25 13:05:36.312  WARN 4268 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-02-25 13:05:37.292  INFO 4268 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-02-25 13:05:37.394  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+?[0m?[0;34m2023-02-25 13:05:37.423  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 8.789 seconds (JVM running for 10.2)
+?[0;34m2023-02-25 13:05:38.076  INFO 4268 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:05:38.076  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:05:38.083  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+?[0m?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
 ?[0m?[1;31m
 Start test 2?[0m
+?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 3?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 4?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 5?[0m
+?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
 ?[1;31m
 Start test 6?[0m
+?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 7?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 8?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 9?[0m
+?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
 ?[1;31m
 Start test 10?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 11?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 12?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 13?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 14?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 15?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 16?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 17?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 18?[0m
-?[0;34m2023-02-15 08:08:59.179  WARN 6664 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 4, column: 4]]
+?[0m?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
 ?[1;31m
 Start test 19?[0m
-?[0m?[0;34m2023-02-15 08:08:59.249  WARN 6664 --- [nio-8889-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
-?[1;31m
+?[0;34m2023-02-25 13:05:39.770  INFO 4268 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-02-25 13:05:39.774  INFO 4268 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2023-02-25 13:05:39.804  INFO 4268 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
+?[0m?[0;34m
+?[0m?[0;34m2023-02-25 13:05:50.170  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.4.1 on Sarunas with PID 4268 (started by ACER in C:\Users\ACER\IdeaProjects\Web Quiz Engine\Web Quiz Engine\task)
+?[0m?[0;34m2023-02-25 13:05:50.170  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-02-25 13:05:50.881  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-02-25 13:05:50.895  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-02-25 13:05:51.134  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+?[0m?[0;34m2023-02-25 13:05:51.136  INFO 4268 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-02-25 13:05:51.137  INFO 4268 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-02-25 13:05:51.201  INFO 4268 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-02-25 13:05:51.202  INFO 4268 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1027 ms
+?[0m?[0;34m2023-02-25 13:05:51.280  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2023-02-25 13:05:51.331  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2023-02-25 13:05:51.332  INFO 4268 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+?[0m?[0;34m2023-02-25 13:05:51.457  INFO 4268 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-02-25 13:05:51.480  INFO 4268 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-02-25 13:05:51.616  INFO 4268 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-02-25 13:05:51.619  INFO 4268 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-02-25 13:05:51.734  WARN 4268 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-02-25 13:05:52.067  INFO 4268 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-02-25 13:05:52.113  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+?[0m?[0;34m2023-02-25 13:05:52.129  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 2.008 seconds (JVM running for 24.906)
+?[0m?[1;31m
 Start test 20?[0m
-?[0;34m2023-02-15 08:08:59.294  WARN 6664 --- [nio-8889-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 4, column: 4]]
+?[0;34m2023-02-25 13:05:52.154  INFO 4268 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:05:52.156  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:05:52.162  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+?[0m?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
 ?[1;31m
 Start test 21?[0m
-?[0;34m2023-02-15 08:08:59.322  WARN 6664 --- [nio-8889-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 22?[0m
-?[0;34m2023-02-15 08:08:59.456  WARN 6664 --- [nio-8889-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;?&gt; engine.controller.QuizController.addQuestion(engine.model.Question): [Field error in object 'question' on field 'options': rejected value [{}]; codes [Size.question.options,Size.options,Size.[Ljava.lang.String;,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [question.options,options]; arguments []; default message [options],2147483647,2]; default message [size must be between 2 and 2147483647]] ]
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 23?[0m
-?[0;34m2023-02-15 08:08:59.476  WARN 6664 --- [nio-8889-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 24?[0m
-?[0;34m2023-02-15 08:08:59.504  WARN 6664 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 25?[0m
+?[0;34m2023-02-25 13:05:52.301  WARN 4268 --- [nio-8889-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 26?[0m
+?[0;34m2023-02-25 13:05:52.338  WARN 4268 --- [nio-8889-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 27?[0m
+?[0;34m2023-02-25 13:05:52.369  WARN 4268 --- [nio-8889-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 4, column: 4]]
 ?[1;31m
 Start test 28?[0m
+?[0;34m2023-02-25 13:05:52.383  WARN 4268 --- [nio-8889-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 29?[0m
+?[0;34m2023-02-25 13:05:52.444  WARN 4268 --- [io-8889-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity&lt;?&gt; engine.controller.QuizController.addQuestion(engine.model.Question): [Field error in object 'question' on field 'options': rejected value [{}]; codes [Size.question.options,Size.options,Size.[Ljava.lang.String;,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [question.options,options]; arguments []; default message [options],2147483647,2]; default message [size must be between 2 and 2147483647]] ]
 ?[1;31m
 Start test 30?[0m
+?[0m?[0;34m2023-02-25 13:05:52.455  WARN 4268 --- [nio-8889-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 31?[0m
+?[0m?[0;34m2023-02-25 13:05:52.468  WARN 4268 --- [nio-8889-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('&quot;' (code 34)): was expecting comma to separate Object entries&lt;LF&gt; at [Source: (PushbackInputStream); line: 5, column: 4]]
 ?[1;31m
 Start test 32?[0m
+?[0m?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 33?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 34?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 35?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 36?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 37?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 38?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 39?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 40?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 41?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 42?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 43?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 44?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 45?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 46?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 47?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 48?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 49?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 50?[0m
+?[0m?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 51?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 52?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 53?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 54?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 55?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 56?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 57?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 58?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 59?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 60?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 61?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 62?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 63?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 64?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 65?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 66?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 67?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 68?[0m
+?[0m?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 69?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 70?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 71?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 72?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 73?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 74?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 75?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 76?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 77?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 78?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 79?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 80?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 81?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 82?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 83?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 84?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 85?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 86?[0m
+?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 87?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 88?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 89?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 90?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 91?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 92?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 93?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 94?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 95?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 96?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 97?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 98?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 99?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 100?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 101?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 102?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 103?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 104?[0m
+?[0;34mHibernate: insert into questions (id, answer, options, text, title) values (null, ?, ?, ?, ?)
 ?[1;31m
 Start test 105?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 106?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 107?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 108?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 109?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 110?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 111?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 112?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 113?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 ?[1;31m
 Start test 114?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 115?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 116?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 117?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 118?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 119?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 120?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 121?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 122?[0m
+?[0m?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
+?[1;31m
+Start test 123?[0m
+?[0;34m2023-02-25 13:05:54.524  INFO 4268 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-02-25 13:05:54.526  INFO 4268 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+?[0m?[0;34m2023-02-25 13:05:54.546  INFO 4268 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
+?[0m?[0;34m
+?[0m?[0;34m2023-02-25 13:06:05.169  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Starting WebQuizEngine using Java 17.0.4.1 on Sarunas with PID 4268 (started by ACER in C:\Users\ACER\IdeaProjects\Web Quiz Engine\Web Quiz Engine\task)
+?[0m?[0;34m2023-02-25 13:06:05.170  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-02-25 13:06:05.652  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-02-25 13:06:05.664  INFO 4268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-02-25 13:06:06.008  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+?[0m?[0;34m2023-02-25 13:06:06.010  INFO 4268 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-02-25 13:06:06.011  INFO 4268 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-02-25 13:06:06.304  INFO 4268 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-02-25 13:06:06.306  INFO 4268 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+?[0m?[0;34m2023-02-25 13:06:06.371  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+?[0m?[0;34m2023-02-25 13:06:06.386  INFO 4268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+?[0m?[0;34m2023-02-25 13:06:06.387  INFO 4268 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../quizdb'
+?[0m?[0;34m2023-02-25 13:06:06.439  INFO 4268 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-02-25 13:06:06.453  INFO 4268 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-02-25 13:06:06.550  INFO 4268 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-02-25 13:06:06.550  INFO 4268 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-02-25 13:06:06.659  WARN 4268 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-02-25 13:06:06.982  INFO 4268 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-02-25 13:06:07.006  INFO 4268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+?[0m?[0;34m2023-02-25 13:06:07.019  INFO 4268 --- [    Test worker] engine.WebQuizEngine                     : Started WebQuizEngine in 1.902 seconds (JVM running for 39.797)
+?[0m?[1;31m
+Start test 124?[0m
+?[0;34m2023-02-25 13:06:07.030  INFO 4268 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:06:07.030  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-02-25 13:06:07.032  INFO 4268 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+?[0m?[0;34mHibernate: select question0_.id as id1_0_, question0_.answer as answer2_0_, question0_.options as options3_0_, question0_.text as text4_0_, question0_.title as title5_0_ from questions question0_
+?[1;31m
+Start test 125?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 126?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 127?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
+?[1;31m
+Start test 128?[0m
+?[0;34mHibernate: select question0_.id as id1_0_0_, question0_.answer as answer2_0_0_, question0_.options as options3_0_0_, question0_.text as text4_0_0_, question0_.title as title5_0_0_ from questions question0_ where question0_.id=?
 </pre>
 </span>
 </div>
@@ -355,7 +585,7 @@ Start test 114?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 15 Feb 2023, 08:09:01</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 25 Feb 2023, 13:06:07</p>
 </div>
 </div>
 </body>

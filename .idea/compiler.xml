@@ -2,6 +2,13 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-Check_for_null.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-Class_type_parameters.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-How_to_declare_a_generic_method.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-Print_content.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-The_first_element.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-The_usage_of_parameters.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Generic_methods-Theory.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Regexes_in_programs-Card_name_validation_and_identification.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Regexes_in_programs-Check_IP_address.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Regexes_in_programs-Check_the_clock_time.main" target="11" />

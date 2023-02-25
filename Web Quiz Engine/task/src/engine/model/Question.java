@@ -1,18 +1,22 @@
 package engine.model;
 
-
-
-
 import io.micrometer.core.lang.NonNull;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.Arrays;
 import java.util.Objects;
 
+@Entity
+@Table(name="questions")
 public class Question {
 
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @NotEmpty
     private String title;
@@ -25,7 +29,6 @@ public class Question {
 
     @NonNull
     private int[] answer;
-
 
 
     public Question() {
@@ -41,6 +44,14 @@ public class Question {
         this.answer = (answer == null ? new int[]{} : answer);
     }
 
+    public int getId() {
+
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -74,9 +85,6 @@ public class Question {
     public void setAnswer(int[] answer) {
         this.answer = answer;
     }
-
-
-
 
 
 

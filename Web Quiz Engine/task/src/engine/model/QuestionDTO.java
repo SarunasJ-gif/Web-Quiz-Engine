@@ -16,22 +16,19 @@ public class QuestionDTO {
     @JsonIgnore
     private int[] answer;
 
-    @JsonIgnore
-    private static int createID;
 
 
 
-    public QuestionDTO(String title, String text, String[] options, int[] answer) {
+    public QuestionDTO(int id, String title, String text, String[] options, int[] answer) {
+        this.id = id;
         this.title = title;
         this.text = text;
         this.options = options;
-        this.answer = answer == null ? new int[]{} : answer;
-        this.id = createNewId();
+        this.answer = answer;
+//                == null ? new int[]{} : answer;
     }
 
-    public int createNewId() {
-        return ++createID;
-    }
+
     public int getId() {
         return id;
     }

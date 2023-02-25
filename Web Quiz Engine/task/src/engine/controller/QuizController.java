@@ -5,6 +5,7 @@ import engine.model.Success;
 import engine.model.Question;
 import engine.model.QuestionDTO;
 import engine.service.QuizService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,19 +20,9 @@ import java.util.Optional;
 //@Validated
 public class QuizController {
 
-    QuizService service = new QuizService();
+    @Autowired
+    private QuizService service;
 
-//    Question q = new Question("The Java Logo",
-//            "What is depicted on the Java logo?",
-//            new String[]{"Robot", "Tea leaf", "Cup of coffee", "Bug"},
-//            2);
-//
-//
-//    @GetMapping("/api/quiz")
-//    public Question getQuestion() {
-//        return question;
-//    }
-//
     @PostMapping("/api/quizzes/{id}/solve")
     public Success getAnswer(@PathVariable int id, @RequestBody @Valid Answer answer) {
         Optional <QuestionDTO> optionalQuestion = Optional.ofNullable(service.getQuestionById(id));
