@@ -1,5 +1,6 @@
 package engine.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.micrometer.core.lang.NonNull;
 
 import javax.persistence.*;
@@ -29,6 +30,9 @@ public class Question {
 
     @NonNull
     private int[] answer;
+
+    @JsonIgnore
+    private String userName;
 
 
     public Question() {
@@ -86,21 +90,27 @@ public class Question {
         this.answer = answer;
     }
 
+    public String getUserName() {
+        return userName;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Question question = (Question) o;
-        return answer == question.answer && Objects.equals(title, question.title) && Objects.equals(text, question.text) && Arrays.equals(options, question.options);
+        return id == question.id && Objects.equals(title, question.title) && Objects.equals(text, question.text) && Arrays.equals(options, question.options) && Arrays.equals(answer, question.answer) && Objects.equals(userName, question.userName);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(title, text, Arrays.hashCode(answer));
+        int result = Objects.hash(id, title, text, userName);
         result = 31 * result + Arrays.hashCode(options);
+        result = 31 * result + Arrays.hashCode(answer);
         return result;
     }
-
 }

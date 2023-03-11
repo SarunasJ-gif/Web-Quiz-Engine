@@ -12,6 +12,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/About abstract classes" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/IntBinaryOperation" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Parts of an abstract class" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Abstract class/Users and WebSites" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/Check for null" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/Class type parameters" />
             <option value="$PROJECT_DIR$/Topics/Generic methods/How to declare a generic method" />

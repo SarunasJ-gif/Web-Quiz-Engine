@@ -4,6 +4,8 @@ import engine.model.Question;
 import engine.model.QuestionDTO;
 import engine.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -16,6 +18,9 @@ public class QuizService {
     private QuestionRepository questionRepository;
 
     public QuestionDTO addQuestion(Question question) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String userName = auth.getName();
+        question.setUserName(userName);
         questionRepository.save(question);
         return new QuestionDTO(question.getId(),
                 question.getTitle(),
@@ -36,13 +41,21 @@ public class QuizService {
             }
     }
 
-        public List<QuestionDTO> getAllQuestions() {
-            Iterable<Question> questions = questionRepository.findAll();
-            List<QuestionDTO> questionsDto = Collections.synchronizedList(new ArrayList<>());
-            for (Question question : questions) {
-                questionsDto.add(new QuestionDTO(question.getId(), question.getTitle(),
-                        question.getText(), question.getOptions(), question.getAnswer()));
-            }
-            return questionsDto;
+    public List<QuestionDTO> getAllQuestions() {
+        Iterable<Question> questions = questionRepository.findAll();
+        List<QuestionDTO> questionsDto = Collections.synchronizedList(new ArrayList<>());
+        for (Question question : questions) {
+            questionsDto.add(new QuestionDTO(question.getId(), question.getTitle(),
+                    question.getText(), question.getOptions(), question.getAnswer()));
+        }
+        return questionsDto;
+    }
+
+    public Optional<Question> getQuestionToDeleteById(int id) {
+        return questionRepository.findById(id);
+    }
+
+    public void deleteQuiz(Question question) {
+        questionRepository.delete(question);
     }
 }

@@ -2,6 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
+      <module name="Web_Quiz_Engine.Topics-Abstract_class-About_abstract_classes.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Abstract_class-IntBinaryOperation.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Abstract_class-Parts_of_an_abstract_class.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Abstract_class-Theory.main" target="11" />
+      <module name="Web_Quiz_Engine.Topics-Abstract_class-Users_and_WebSites.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Generic_methods-Check_for_null.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Generic_methods-Class_type_parameters.main" target="11" />
       <module name="Web_Quiz_Engine.Topics-Generic_methods-How_to_declare_a_generic_method.main" target="11" />

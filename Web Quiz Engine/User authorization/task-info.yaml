@@ -665,6 +665,431 @@ files:
         }
     }
   learner_created: false
+- name: src/engine/model/Answer.java
+  visible: true
+  text: |
+    package engine.model;
+
+    import io.micrometer.core.lang.NonNull;
+
+    import java.util.Arrays;
+
+    public class Answer {
+
+        @NonNull
+        private int[] answer;
+
+        public Answer() {}
+
+        public int[] getAnswer() {
+            Arrays.sort(answer);
+            return answer;
+        }
+
+        public void setAnswer(int[] answer) {
+            this.answer = answer;
+        }
+    }
+  learner_created: true
+- name: src/engine/service/QuizService.java
+  visible: true
+  text: |-
+    package engine.service;
+
+    import engine.model.Question;
+    import engine.model.QuestionDTO;
+    import engine.repository.QuestionRepository;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.stereotype.Service;
+
+    import java.util.*;
+
+    @Service
+    public class QuizService {
+
+
+        @Autowired
+        private QuestionRepository questionRepository;
+
+        public QuestionDTO addQuestion(Question question) {
+            questionRepository.save(question);
+            return new QuestionDTO(question.getId(),
+                    question.getTitle(),
+                    question.getText(), question.getOptions(),
+                    question.getAnswer());
+        }
+
+        public QuestionDTO getQuestionById(int id) {
+            Optional<Question> optionalQuestion = questionRepository.findById(id);
+                if (optionalQuestion.isEmpty()) {
+                    return null;
+                } else {
+                    Question question = optionalQuestion.get();
+                    return new QuestionDTO(question.getId(),
+                            question.getTitle(),
+                            question.getText(), question.getOptions(),
+                            question.getAnswer());
+                }
+        }
+
+            public List<QuestionDTO> getAllQuestions() {
+                Iterable<Question> questions = questionRepository.findAll();
+                List<QuestionDTO> questionsDto = Collections.synchronizedList(new ArrayList<>());
+                for (Question question : questions) {
+                    questionsDto.add(new QuestionDTO(question.getId(), question.getTitle(),
+                            question.getText(), question.getOptions(), question.getAnswer()));
+                }
+                return questionsDto;
+        }
+    }
+  learner_created: true
+- name: src/engine/model/Success.java
+  visible: true
+  text: |
+    package engine.model;
+
+    import java.util.Objects;
+
+    public class Success {
+
+        private boolean success;
+        private String feedback;
+
+        public Success(boolean success, String feedback) {
+            this.success = success;
+            this.feedback = feedback;
+        }
+
+        public boolean isSuccess() {
+            return success;
+        }
+
+        public void setSuccess(boolean success) {
+            this.success = success;
+        }
+
+        public String getFeedback() {
+            return feedback;
+        }
+
+        public void setFeedback(String feedback) {
+            this.feedback = feedback;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Success answer = (Success) o;
+            return success == answer.success && Objects.equals(feedback, answer.feedback);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(success, feedback);
+        }
+    }
+  learner_created: true
+- name: src/engine/model/Question.java
+  visible: true
+  text: |
+    package engine.model;
+
+    import io.micrometer.core.lang.NonNull;
+
+    import javax.persistence.*;
+    import javax.validation.constraints.NotEmpty;
+    import javax.validation.constraints.Size;
+    import java.util.Arrays;
+    import java.util.Objects;
+
+    @Entity
+    @Table(name="questions")
+    public class Question {
+
+
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private int id;
+
+        @NotEmpty
+        private String title;
+        @NotEmpty
+        private String text;
+
+        @NonNull
+        @Size(min=2)
+        private String[] options;
+
+        @NonNull
+        private int[] answer;
+
+
+        public Question() {
+            options = new String[0];
+            answer = new int[0];
+        }
+
+
+        public Question(String title, String text, String[] options, int[] answer) {
+            this.title = title;
+            this.text = text;
+            this.options = options;
+            this.answer = (answer == null ? new int[]{} : answer);
+        }
+
+        public int getId() {
+
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public String[] getOptions() {
+            return options;
+        }
+
+        public void setOptions(String[] options) {
+            this.options = options;
+        }
+
+        public int[] getAnswer() {
+            Arrays.sort(answer);
+            return answer;
+        }
+
+        public void setAnswer(int[] answer) {
+            this.answer = answer;
+        }
+
+
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Question question = (Question) o;
+            return answer == question.answer && Objects.equals(title, question.title) && Objects.equals(text, question.text) && Arrays.equals(options, question.options);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = Objects.hash(title, text, Arrays.hashCode(answer));
+            result = 31 * result + Arrays.hashCode(options);
+            return result;
+        }
+
+    }
+  learner_created: true
+- name: src/engine/model/QuestionDTO.java
+  visible: true
+  text: |
+    package engine.model;
+
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+
+    import java.util.Arrays;
+    import java.util.Objects;
+
+    public class QuestionDTO {
+
+
+        private int id;
+        private String title;
+        private String text;
+        private String[] options;
+
+        @JsonIgnore
+        private int[] answer;
+
+
+
+
+        public QuestionDTO(int id, String title, String text, String[] options, int[] answer) {
+            this.id = id;
+            this.title = title;
+            this.text = text;
+            this.options = options;
+            this.answer = answer;
+    //                == null ? new int[]{} : answer;
+        }
+
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public String[] getOptions() {
+            return options;
+        }
+
+        public void setOptions(String[] options) {
+            this.options = options;
+        }
+
+        public int[] getAnswer() {
+            Arrays.sort(answer);
+            return answer;
+        }
+
+        public void setAnswer(int[] answer) {
+            this.answer = answer;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            QuestionDTO that = (QuestionDTO) o;
+            return id == that.id && Objects.equals(title, that.title) && Objects.equals(text, that.text) && Arrays.equals(options, that.options) && Arrays.equals(answer, that.answer);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = Objects.hash(id, title, text);
+            result = 31 * result + Arrays.hashCode(options);
+            result = 31 * result + Arrays.hashCode(answer);
+            return result;
+        }
+    }
+  learner_created: true
+- name: src/engine/repository/QuestionRepository.java
+  visible: true
+  text: |
+    package engine.repository;
+
+    import engine.model.Question;
+    import org.springframework.data.repository.CrudRepository;
+    import org.springframework.stereotype.Repository;
+
+    @Repository
+    public interface QuestionRepository extends CrudRepository<Question, Integer> {
+    }
+  learner_created: true
+- name: src/engine/controller/QuizController.java
+  visible: true
+  text: |
+    package engine.controller;
+
+    import engine.model.Answer;
+    import engine.model.Success;
+    import engine.model.Question;
+    import engine.model.QuestionDTO;
+    import engine.service.QuizService;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.web.bind.annotation.*;
+    import org.springframework.web.server.ResponseStatusException;
+
+
+    import javax.validation.Valid;
+    import java.util.Arrays;
+    import java.util.Optional;
+
+    @RestController
+    //@Validated
+    public class QuizController {
+
+        @Autowired
+        private QuizService service;
+
+        @PostMapping("/api/quizzes/{id}/solve")
+        public Success getAnswer(@PathVariable int id, @RequestBody @Valid Answer answer) {
+            Optional <QuestionDTO> optionalQuestion = Optional.ofNullable(service.getQuestionById(id));
+            if (optionalQuestion.isEmpty()) {
+                throw  new ResponseStatusException(HttpStatus.BAD_REQUEST);
+            } else {
+                QuestionDTO question = optionalQuestion.get();
+                if (Arrays.equals(answer.getAnswer(), question.getAnswer())) {
+                    return new Success(true, "Congratulations, you're right!");
+                } else {
+                    return new Success(false, "Wrong answer! Please, try again.");
+                }
+            }
+        }
+
+        @PostMapping("/api/quizzes")
+        public ResponseEntity<?> addQuestion(@RequestBody @Valid Question question) {
+            QuestionDTO questionDTO = service.addQuestion(question);
+            return new ResponseEntity<>(questionDTO, HttpStatus.OK);
+        }
+
+        @GetMapping("/api/quizzes/{id}")
+        public ResponseEntity<?> getQuestion(@PathVariable int id) {
+            Optional <QuestionDTO> optionalQuestion = Optional.ofNullable(service.getQuestionById(id));
+            if (optionalQuestion.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            } else {
+                QuestionDTO question = optionalQuestion.get();
+                return new ResponseEntity<>(question, HttpStatus.OK);
+            }
+        }
+
+        @GetMapping("/api/quizzes")
+        public Iterable<QuestionDTO> getAllQuestions() {
+            return service.getAllQuestions();
+        }
+
+    }
+  learner_created: true
+- name: src/engine/model/User.java
+  visible: true
+  learner_created: true
+- name: src/engine/repository/UserRepository.java
+  visible: true
+  learner_created: true
+- name: src/engine/security/UserData.java
+  visible: true
+  learner_created: true
+- name: src/engine/service/UserDataService.java
+  visible: true
+  learner_created: true
+- name: src/engine/security/SecurityConfiguration.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/8256#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 11 Mar 2023 08:22:43 UTC"
 record: -1
