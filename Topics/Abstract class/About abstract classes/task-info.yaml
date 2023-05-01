@@ -1,8 +1,8 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: An abstract class can have private methods
 - text: An abstract class can have several abstract methods
+- text: An abstract class can have private methods
 - text: An abstract class cannot have fields
 - text: It's possible to create an instance of an abstract class
 files:

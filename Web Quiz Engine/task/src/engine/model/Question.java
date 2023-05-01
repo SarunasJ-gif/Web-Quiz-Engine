@@ -1,6 +1,8 @@
 package engine.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micrometer.core.lang.NonNull;
 
 import javax.persistence.*;
@@ -12,7 +14,6 @@ import java.util.Objects;
 @Entity
 @Table(name="questions")
 public class Question {
-
 
 
     @Id
